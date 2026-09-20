@@ -1,0 +1,67 @@
+.header-card { 
+    background: white; 
+    padding: 24px 30px; 
+    border-radius: 16px; 
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03); 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 24px; 
+    border: 1px solid #f1f5f9; 
+}
+
+.content-card { 
+    background: white; 
+    padding: 24px 30px; 
+    border-radius: 16px; 
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03); 
+    border: 1px solid #f1f5f9; 
+}
+
+.card-header-flex { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 20px; 
+}
+
+.btn-tambah { 
+    background: #16a34a; 
+    color: white; 
+    padding: 10px 18px; 
+    border-radius: 10px; 
+    text-decoration: none; 
+    font-size: 13px; 
+    font-weight: 600; 
+    box-shadow: 0 4px 12px rgba(22, 163, 74, 0.2); 
+}
+
+.data-table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    text-align: left; 
+}
+
+.data-table th { 
+    padding: 14px 16px; 
+    background: #f8fafc; 
+    color: #64748b; 
+    font-size: 13px; 
+    border-bottom: 2px solid #e2e8f0; 
+}
+
+.data-table td { 
+    padding: 14px 16px; 
+    border-bottom: 1px solid #f1f5f9; 
+    font-size: 14px; 
+    color: #334155; 
+}
+
+.status-badge { 
+    background: #dcfce7; 
+    color: #15803d; 
+    padding: 5px 12px; 
+    border-radius: 20px; 
+    font-size: 12px; 
+    font-weight: 600; 
+}

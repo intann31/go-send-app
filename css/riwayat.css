@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 20px;
+    color: #1c1c1c;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.page-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #00aa5b;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e5e7eb;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f3f4f6;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+}
+
+.kode-pesanan {
+    font-weight: 700;
+    font-size: 14px;
+    color: #374151;
+}
+
+.tgl-pesanan {
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+.badge {
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.badge-selesai { background: #e5f9f1; color: #00aa5b; }
+.badge-proses { background: #fff4e5; color: #f59e0b; }
+.badge-batal { background: #fde8e8; color: #ef4444; }
+
+.nama-barang {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.detail-rute {
+    font-size: 13px;
+    color: #4b5563;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px dashed #e5e7eb;
+    padding-top: 12px;
+    margin-top: 12px;
+}
+
+.total-biaya {
+    font-size: 15px;
+    font-weight: 700;
+    color: #10b981;
+}
+
+.btn-group {
+    display: flex;
+    gap: 8px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.btn-tracking {
+    background-color: #00aa5b;
+    color: white;
+}
+
+.btn-rating {
+    background-color: #f59e0b;
+    color: white;
+}
+
+.rated-box {
+    font-size: 12px;
+    color: #f59e0b;
+    font-weight: 600;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    background: white;
+    border-radius: 16px;
+    color: #6b7280;
+}

@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* --- SIDEBAR --- */
+.sidebar {
+    width: 260px;
+    background-color: #1e293b;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    position: fixed;
+    height: 100vh;
+}
+
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.brand-icon {
+    font-size: 28px;
+}
+
+.sidebar-brand strong {
+    display: block;
+    font-size: 18px;
+}
+
+.sidebar-brand small {
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-grow: 1;
+}
+
+.sidebar-menu a, .sidebar-bottom a {
+    color: #cbd5e1;
+    text-decoration: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.sidebar-menu a:hover, .sidebar-bottom a:hover {
+    background-color: #334155;
+    color: #fff;
+}
+
+.sidebar-menu a.active {
+    background-color: #0f766e;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* --- MAIN CONTENT --- */
+.main-content {
+    margin-left: 260px;
+    flex: 1;
+    padding: 30px;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    background: #fff;
+    padding: 20px 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+}
+
+.topbar h1 {
+    font-size: 24px;
+    color: #0f172a;
+}
+
+.topbar p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-avatar {
+    width: 42px;
+    height: 42px;
+    background-color: #0f766e;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* --- TRACKING CARDS --- */
+.dashboard-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.glass-panel {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.empty-icon {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.btn-primary {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #0f766e;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* --- TRACKING DETAILS --- */
+.tracking-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.panel-label {
+    font-size: 11px;
+    color: #64748b;
+    letter-spacing: 1px;
+}
+
+.tracking-status {
+    background-color: #ccfbf1;
+    color: #0f766e;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.tracking-info {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 20px;
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.tracking-info span, .route-item small, .driver-box small, .location-box span {
+    display: block;
+    font-size: 12px;
+    color: #64748b;
+}
+
+/* RUTE */
+.tracking-route {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.route-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.route-dot {
+    width: 12px;
+    height: 12px;
+    background-color: #0f766e;
+    border-radius: 50%;
+}
+
+.route-line {
+    flex-grow: 1;
+    height: 2px;
+    background-color: #cbd5e1;
+}
+
+/* DRIVER & LOKASI */
+.driver-box, .location-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #f1f5f9;
+    padding: 12px 18px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.driver-icon {
+    font-size: 20px;
+}
+
+.location-box {
+    background-color: #fef3c7;
+    border-left: 4px solid #f59e0b;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+}
+
+.location-box span {
+    color: #b45309;
+    font-weight: 600;
+}
+
+/* TIMELINE STATUS */
+.status-timeline {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    position: relative;
+    padding-top: 10px;
+}
+
+.timeline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    opacity: 0.4;
+}
+
+.timeline-item.active {
+    opacity: 1;
+}
+
+.timeline-dot {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #cbd5e1;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.timeline-item.active .timeline-dot {
+    background-color: #0f766e;
+}
+
+.timeline-item strong {
+    font-size: 13px;
+    display: block;
+}
+
+.timeline-item small {
+    font-size: 11px;
+    color: #64748b;
+}

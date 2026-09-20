@@ -1,0 +1,264 @@
+/* ==========================================
+   STYLING KONTEN UTAMA & TABEL PEMBAYARAN
+========================================== */
+
+/* Layout Utama */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0b0f19;
+    color: #f8fafc;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+}
+
+.main-content {
+    flex: 1;
+    padding: 30px;
+    background-color: #0b0f19;
+    min-height: 100vh;
+}
+
+/* Header / Topbar */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.topbar h1 {
+    font-size: 24px;
+    margin: 0 0 6px 0;
+    color: #ffffff;
+}
+
+.topbar p {
+    color: #94a3b8;
+    margin: 0;
+    font-size: 14px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    background: #2563eb;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.user-info strong {
+    display: block;
+    color: #ffffff;
+}
+
+.user-info small {
+    color: #94a3b8;
+}
+
+/* Glass Panel / Card Wrapper */
+.glass-panel {
+    background: #121826;
+    border: 1px solid #1e293b;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.panel-label {
+    color: #38bdf8;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.panel-header h2 {
+    color: #ffffff;
+    font-size: 20px;
+    margin: 0 0 20px 0;
+}
+
+/* Tabel Data */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.data-table th {
+    background-color: #1e293b;
+    color: #38bdf8;
+    padding: 14px 16px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid #334155;
+}
+
+.data-table td {
+    padding: 16px;
+    border-bottom: 1px solid #1e293b;
+    font-size: 14px;
+    color: #e2e8f0;
+}
+
+.data-table tr:hover {
+    background-color: #1a2336;
+}
+
+.data-table small {
+    color: #94a3b8;
+}
+
+/* Tombol dan Badge */
+.btn-small {
+    background: #2563eb;
+    color: #ffffff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 12px;
+    display: inline-block;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-approve {
+    background: #16a34a;
+    color: #ffffff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.btn-reject {
+    background: #dc2626;
+    color: #ffffff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.table-status {
+    background: #1e293b;
+    color: #f59e0b;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.done-text {
+    color: #10b981;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.empty-table {
+    text-align: center;
+    padding: 30px !important;
+    color: #94a3b8;
+}
+/* Container Utama Sidebar */
+.sidebar {
+  width: 260px;
+  min-height: 100vh;
+  background-color: #0b0f19;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* Header Logo & Subtitle */
+.sidebar-header {
+  padding: 0 12px 24px 12px;
+  border-bottom: 1px solid #1e293b;
+  margin-bottom: 20px;
+}
+
+.sidebar-header h2 {
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.sidebar-header span {
+  color: #38bdf8;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  display: block;
+  margin-top: 4px;
+}
+
+/* Navigasi Vertikal */
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Item Menu Biasa */
+.nav-item {
+  display: block;
+  padding: 14px 18px;
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 12px;
+  background-color: #121826;
+  transition: all 0.3s ease;
+}
+
+.nav-item:hover {
+  background-color: #1e293b;
+  color: #ffffff;
+}
+
+/* Item Menu yang Sedang Aktif (Biru Menyala) */
+.nav-item.active {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Garis Putih Kecil di Sebelah Kiri Item Active */
+.nav-item.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 15%;
+  height: 70%;
+  width: 4px;
+  background-color: #ffffff;
+  border-radius: 0 4px 4px 0;
+}
