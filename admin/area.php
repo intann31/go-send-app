@@ -101,7 +101,6 @@ if (!$conn) {
 </head>
 <body>
 
-    <!-- SIDEBAR -->
     <aside class="sidebar">
         <div class="sidebar-brand">
             <span style="font-size: 20px;">📦</span>
@@ -123,7 +122,6 @@ if (!$conn) {
         </div>
     </aside>
 
-    <!-- KONTEN UTAMA -->
     <main class="main-content">
         <header class="topbar">
             <div>
@@ -133,7 +131,6 @@ if (!$conn) {
         </header>
 
         <section>
-            <!-- Form Tambah Area -->
             <div class="tracking-card">
                 <h2 style="margin-top: 0; font-size: 18px; color: #ffffff; margin-bottom: 15px;">Tambah Wilayah Operasional</h2>
                 
@@ -143,9 +140,10 @@ if (!$conn) {
                     $keterangan = mysqli_real_escape_string($conn, $_POST['keterangan']);
 
                     if (!empty($nama_area)) {
-                        $insert = mysqli_query($conn, "INSERT INTO area_layanan (nama_area, keterangan) VALUES ('$nama_area', '$keterangan')");
+                        // Menggunakan tabel 'area'
+                        $insert = mysqli_query($conn, "INSERT INTO area (nama_area, keterangan) VALUES ('$nama_area', '$keterangan')");
                         if ($insert) {
-                            echo '<div style="background: #065f46; color: #34d399; padding: 10px 15px; border-radius: 8px; margin-bottom: 15px; font-size: 14px;">Area layanan berhasil ditambahkan!</div>';
+                            echo '<div style="background: #065f46; color: #34d399; padding: 10px 15px; border-radius: 8px; margin-bottom: 15px; font-size: 14px;">Area berhasil ditambahkan!</div>';
                         } else {
                             echo '<div style="background: #7f1d1d; color: #f87171; padding: 10px 15px; border-radius: 8px; margin-bottom: 15px; font-size: 14px;">Gagal menambah area: ' . mysqli_error($conn) . '</div>';
                         }
@@ -166,7 +164,6 @@ if (!$conn) {
                 </form>
             </div>
 
-            <!-- Tabel Daftar Wilayah -->
             <div class="tracking-card">
                 <h2 style="margin-top: 0; font-size: 18px; color: #ffffff; margin-bottom: 15px;">Daftar Wilayah Operasional</h2>
                 <div style="overflow-x: auto;">
@@ -181,7 +178,8 @@ if (!$conn) {
                         <tbody>
                             <?php
                             $no = 1;
-                            $query = mysqli_query($conn, "SELECT * FROM area_layanan ORDER BY id DESC");
+                            // Mengambil data dari tabel 'area'
+                            $query = mysqli_query($conn, "SELECT * FROM area ORDER BY id DESC");
                             if ($query && mysqli_num_rows($query) > 0) {
                                 while ($row = mysqli_fetch_assoc($query)) {
                                     echo '<tr style="border-bottom: 1px solid #1f2937;">';
